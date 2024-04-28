@@ -5,13 +5,13 @@
   --base02: rgb(var(--base02-rgb));
   --base01-rgb: 88, 110, 117;
   --base01: rgb(var(--base01-rgb));
-  --base00-rgb: 101, 123, 131;
+  --base00-rgb: 50, 60, 64;
   --base00: rgb(var(--base00-rgb));
-  --base0-rgb: 131, 148, 150;
+  --base0-rgb: 70, 93, 101;
   --base0: rgb(var(--base0-rgb));
   --base1-rgb: 147, 161, 161;
   --base1: rgb(var(--base1-rgb));
-  --base2-rgb: 238, 232, 213;
+  --base2-rgb: 208, 202, 180;
   --base2: rgb(var(--base2-rgb));
   --base3-rgb: 253, 246, 227;
   --base3: rgb(var(--base3-rgb));
@@ -230,13 +230,6 @@
   text-decoration-color: var(--link-unresolved-color-hover);
 }
 
-/* Highlight current line */
-.cm-active {
-  background: var(--active-bg);
-}
-.cm-active.cm-gutterElement {
-  color: var(--color-accent);
-}
 
 /* Hashtags */
 .cm-hashtag.cm-hashtag-begin, .cm-hashtag.cm-hashtag-end {
@@ -263,6 +256,26 @@
 .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title,
 .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title {
   box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+* {
+  line-height: 115%;
+
+}
+
+.list-bullet {
+  font-size: 0;  /* remove the bullet char */
+}
+.list-bullet::before {
+  content: '-';
+  font-size: 1rem;
+  padding-right: 0.18rem;
+  color: var(--text-normal);
+}
+
+.external-link {
+  background-image: none;
+  padding-right: 0px;
 }
 
 /*# sourceMappingURL=theme.css.map */
